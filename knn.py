@@ -47,7 +47,7 @@ class KNN:
                 distances.append([dist, j])
             distances.sort()
             distances = distances[0:self.k]
-            for d, j in distances:
+            for _, j in distances:
                 neighbors.append(self.y_train[j])
             ans = max(neighbors)
             sorted_output.append(ans)
